@@ -29,32 +29,56 @@
         private void InitializeComponent()
         {
             this.groupBoxDigits = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.buttonSignChange = new System.Windows.Forms.Button();
+            this.buttonDecimal = new System.Windows.Forms.Button();
+            this.button0 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBoxArithmeticOperators = new System.Windows.Forms.GroupBox();
+            this.buttonSquare = new System.Windows.Forms.Button();
+            this.buttonMod = new System.Windows.Forms.Button();
+            this.buttonAddition = new System.Windows.Forms.Button();
+            this.buttonDivision = new System.Windows.Forms.Button();
+            this.buttonDivisionByX = new System.Windows.Forms.Button();
+            this.buttonSqrt = new System.Windows.Forms.Button();
+            this.buttonSubstraction = new System.Windows.Forms.Button();
+            this.buttonMultiplication = new System.Windows.Forms.Button();
+            this.groupBoxMemoryModes = new System.Windows.Forms.GroupBox();
+            this.buttonMPlus = new System.Windows.Forms.Button();
+            this.buttonMS = new System.Windows.Forms.Button();
+            this.buttonMR = new System.Windows.Forms.Button();
+            this.buttonMC = new System.Windows.Forms.Button();
+            this.textBoxNumbers = new System.Windows.Forms.TextBox();
+            this.buttonOnOff = new System.Windows.Forms.Button();
+            this.buttonC = new System.Windows.Forms.Button();
+            this.buttonBackSpace = new System.Windows.Forms.Button();
+            this.buttonEquals = new System.Windows.Forms.Button();
+            this.buttonCE = new System.Windows.Forms.Button();
+            this.groupBoxMemoryOperators = new System.Windows.Forms.GroupBox();
             this.groupBoxDigits.SuspendLayout();
+            this.groupBoxArithmeticOperators.SuspendLayout();
+            this.groupBoxMemoryModes.SuspendLayout();
+            this.groupBoxMemoryOperators.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxDigits
             // 
-            this.groupBoxDigits.Controls.Add(this.button10);
-            this.groupBoxDigits.Controls.Add(this.button11);
-            this.groupBoxDigits.Controls.Add(this.button12);
-            this.groupBoxDigits.Controls.Add(this.button7);
-            this.groupBoxDigits.Controls.Add(this.button8);
+            this.groupBoxDigits.Controls.Add(this.buttonSignChange);
+            this.groupBoxDigits.Controls.Add(this.buttonDecimal);
+            this.groupBoxDigits.Controls.Add(this.button0);
             this.groupBoxDigits.Controls.Add(this.button9);
-            this.groupBoxDigits.Controls.Add(this.button4);
-            this.groupBoxDigits.Controls.Add(this.button5);
+            this.groupBoxDigits.Controls.Add(this.button8);
+            this.groupBoxDigits.Controls.Add(this.button7);
             this.groupBoxDigits.Controls.Add(this.button6);
+            this.groupBoxDigits.Controls.Add(this.button5);
+            this.groupBoxDigits.Controls.Add(this.button4);
             this.groupBoxDigits.Controls.Add(this.button3);
             this.groupBoxDigits.Controls.Add(this.button2);
             this.groupBoxDigits.Controls.Add(this.button1);
@@ -63,6 +87,106 @@
             this.groupBoxDigits.Size = new System.Drawing.Size(187, 251);
             this.groupBoxDigits.TabIndex = 0;
             this.groupBoxDigits.TabStop = false;
+            // 
+            // buttonSignChange
+            // 
+            this.buttonSignChange.Location = new System.Drawing.Point(123, 189);
+            this.buttonSignChange.Name = "buttonSignChange";
+            this.buttonSignChange.Size = new System.Drawing.Size(50, 50);
+            this.buttonSignChange.TabIndex = 11;
+            this.buttonSignChange.Text = "-/+";
+            this.buttonSignChange.UseVisualStyleBackColor = true;
+            // 
+            // buttonDecimal
+            // 
+            this.buttonDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonDecimal.Location = new System.Drawing.Point(67, 189);
+            this.buttonDecimal.Name = "buttonDecimal";
+            this.buttonDecimal.Size = new System.Drawing.Size(50, 50);
+            this.buttonDecimal.TabIndex = 10;
+            this.buttonDecimal.Text = ".";
+            this.buttonDecimal.UseVisualStyleBackColor = true;
+            // 
+            // button0
+            // 
+            this.button0.Location = new System.Drawing.Point(11, 189);
+            this.button0.Name = "button0";
+            this.button0.Size = new System.Drawing.Size(50, 50);
+            this.button0.TabIndex = 9;
+            this.button0.Text = "0";
+            this.button0.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(123, 133);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(50, 50);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(67, 133);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(50, 50);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(11, 133);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(50, 50);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(123, 77);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(50, 50);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(67, 77);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(50, 50);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(11, 77);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(50, 50);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(123, 20);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 50);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(67, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -73,134 +197,272 @@
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // groupBoxArithmeticOperators
             // 
-            this.button2.Location = new System.Drawing.Point(67, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "1";
-            this.button2.UseVisualStyleBackColor = true;
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonSquare);
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonMod);
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonAddition);
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonDivision);
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonDivisionByX);
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonSqrt);
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonSubstraction);
+            this.groupBoxArithmeticOperators.Controls.Add(this.buttonMultiplication);
+            this.groupBoxArithmeticOperators.Location = new System.Drawing.Point(220, 131);
+            this.groupBoxArithmeticOperators.Name = "groupBoxArithmeticOperators";
+            this.groupBoxArithmeticOperators.Size = new System.Drawing.Size(140, 251);
+            this.groupBoxArithmeticOperators.TabIndex = 1;
+            this.groupBoxArithmeticOperators.TabStop = false;
             // 
-            // button3
+            // buttonSquare
             // 
-            this.button3.Location = new System.Drawing.Point(123, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "1";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSquare.Location = new System.Drawing.Point(72, 189);
+            this.buttonSquare.Name = "buttonSquare";
+            this.buttonSquare.Size = new System.Drawing.Size(50, 50);
+            this.buttonSquare.TabIndex = 19;
+            this.buttonSquare.Text = "X^2";
+            this.buttonSquare.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonMod
             // 
-            this.button4.Location = new System.Drawing.Point(123, 77);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "1";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonMod.Location = new System.Drawing.Point(72, 77);
+            this.buttonMod.Name = "buttonMod";
+            this.buttonMod.Size = new System.Drawing.Size(50, 50);
+            this.buttonMod.TabIndex = 15;
+            this.buttonMod.Text = "%";
+            this.buttonMod.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonAddition
             // 
-            this.button5.Location = new System.Drawing.Point(67, 77);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 50);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "1";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonAddition.Location = new System.Drawing.Point(16, 189);
+            this.buttonAddition.Name = "buttonAddition";
+            this.buttonAddition.Size = new System.Drawing.Size(50, 50);
+            this.buttonAddition.TabIndex = 18;
+            this.buttonAddition.Text = "+";
+            this.buttonAddition.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonDivision
             // 
-            this.button6.Location = new System.Drawing.Point(11, 77);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(50, 50);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "1";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonDivision.Location = new System.Drawing.Point(16, 20);
+            this.buttonDivision.Name = "buttonDivision";
+            this.buttonDivision.Size = new System.Drawing.Size(50, 50);
+            this.buttonDivision.TabIndex = 12;
+            this.buttonDivision.Text = "/";
+            this.buttonDivision.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // buttonDivisionByX
             // 
-            this.button7.Location = new System.Drawing.Point(123, 133);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(50, 50);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "1";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonDivisionByX.Location = new System.Drawing.Point(72, 133);
+            this.buttonDivisionByX.Name = "buttonDivisionByX";
+            this.buttonDivisionByX.Size = new System.Drawing.Size(50, 50);
+            this.buttonDivisionByX.TabIndex = 17;
+            this.buttonDivisionByX.Text = "1/X";
+            this.buttonDivisionByX.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // buttonSqrt
             // 
-            this.button8.Location = new System.Drawing.Point(67, 133);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(50, 50);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "1";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonSqrt.Location = new System.Drawing.Point(72, 20);
+            this.buttonSqrt.Name = "buttonSqrt";
+            this.buttonSqrt.Size = new System.Drawing.Size(50, 50);
+            this.buttonSqrt.TabIndex = 13;
+            this.buttonSqrt.Text = "sqrt";
+            this.buttonSqrt.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // buttonSubstraction
             // 
-            this.button9.Location = new System.Drawing.Point(11, 133);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "1";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonSubstraction.Location = new System.Drawing.Point(16, 133);
+            this.buttonSubstraction.Name = "buttonSubstraction";
+            this.buttonSubstraction.Size = new System.Drawing.Size(50, 50);
+            this.buttonSubstraction.TabIndex = 16;
+            this.buttonSubstraction.Text = "-";
+            this.buttonSubstraction.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // buttonMultiplication
             // 
-            this.button10.Location = new System.Drawing.Point(123, 189);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "1";
-            this.button10.UseVisualStyleBackColor = true;
+            this.buttonMultiplication.Location = new System.Drawing.Point(16, 77);
+            this.buttonMultiplication.Name = "buttonMultiplication";
+            this.buttonMultiplication.Size = new System.Drawing.Size(50, 50);
+            this.buttonMultiplication.TabIndex = 14;
+            this.buttonMultiplication.Text = "*";
+            this.buttonMultiplication.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // groupBoxMemoryModes
             // 
-            this.button11.Location = new System.Drawing.Point(67, 189);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "1";
-            this.button11.UseVisualStyleBackColor = true;
+            this.groupBoxMemoryModes.Controls.Add(this.buttonMPlus);
+            this.groupBoxMemoryModes.Controls.Add(this.buttonMS);
+            this.groupBoxMemoryModes.Controls.Add(this.buttonMR);
+            this.groupBoxMemoryModes.Controls.Add(this.buttonMC);
+            this.groupBoxMemoryModes.Location = new System.Drawing.Point(128, 55);
+            this.groupBoxMemoryModes.Name = "groupBoxMemoryModes";
+            this.groupBoxMemoryModes.Size = new System.Drawing.Size(232, 70);
+            this.groupBoxMemoryModes.TabIndex = 2;
+            this.groupBoxMemoryModes.TabStop = false;
             // 
-            // button12
+            // buttonMPlus
             // 
-            this.button12.Location = new System.Drawing.Point(11, 189);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(50, 50);
-            this.button12.TabIndex = 9;
-            this.button12.Text = "1";
-            this.button12.UseVisualStyleBackColor = true;
+            this.buttonMPlus.Location = new System.Drawing.Point(174, 14);
+            this.buttonMPlus.Name = "buttonMPlus";
+            this.buttonMPlus.Size = new System.Drawing.Size(50, 50);
+            this.buttonMPlus.TabIndex = 15;
+            this.buttonMPlus.Text = "M+";
+            this.buttonMPlus.UseVisualStyleBackColor = true;
+            // 
+            // buttonMS
+            // 
+            this.buttonMS.Location = new System.Drawing.Point(118, 14);
+            this.buttonMS.Name = "buttonMS";
+            this.buttonMS.Size = new System.Drawing.Size(50, 50);
+            this.buttonMS.TabIndex = 14;
+            this.buttonMS.Text = "MS";
+            this.buttonMS.UseVisualStyleBackColor = true;
+            // 
+            // buttonMR
+            // 
+            this.buttonMR.Location = new System.Drawing.Point(62, 14);
+            this.buttonMR.Name = "buttonMR";
+            this.buttonMR.Size = new System.Drawing.Size(50, 50);
+            this.buttonMR.TabIndex = 13;
+            this.buttonMR.Text = "MR";
+            this.buttonMR.UseVisualStyleBackColor = true;
+            // 
+            // buttonMC
+            // 
+            this.buttonMC.Location = new System.Drawing.Point(6, 14);
+            this.buttonMC.Name = "buttonMC";
+            this.buttonMC.Size = new System.Drawing.Size(50, 50);
+            this.buttonMC.TabIndex = 12;
+            this.buttonMC.Text = "MC";
+            this.buttonMC.UseVisualStyleBackColor = true;
+            // 
+            // textBoxNumbers
+            // 
+            this.textBoxNumbers.Location = new System.Drawing.Point(12, 27);
+            this.textBoxNumbers.Name = "textBoxNumbers";
+            this.textBoxNumbers.ReadOnly = true;
+            this.textBoxNumbers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxNumbers.Size = new System.Drawing.Size(348, 22);
+            this.textBoxNumbers.TabIndex = 3;
+            this.textBoxNumbers.Text = "0";
+            // 
+            // buttonOnOff
+            // 
+            this.buttonOnOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.buttonOnOff.Location = new System.Drawing.Point(40, 76);
+            this.buttonOnOff.Name = "buttonOnOff";
+            this.buttonOnOff.Size = new System.Drawing.Size(50, 37);
+            this.buttonOnOff.TabIndex = 4;
+            this.buttonOnOff.Text = "Off";
+            this.buttonOnOff.UseVisualStyleBackColor = true;
+            this.buttonOnOff.Click += new System.EventHandler(this.buttonOnOff_Click);
+            // 
+            // buttonC
+            // 
+            this.buttonC.Location = new System.Drawing.Point(122, 21);
+            this.buttonC.Name = "buttonC";
+            this.buttonC.Size = new System.Drawing.Size(50, 50);
+            this.buttonC.TabIndex = 12;
+            this.buttonC.Text = "C";
+            this.buttonC.UseVisualStyleBackColor = true;
+            // 
+            // buttonBackSpace
+            // 
+            this.buttonBackSpace.Location = new System.Drawing.Point(178, 21);
+            this.buttonBackSpace.Name = "buttonBackSpace";
+            this.buttonBackSpace.Size = new System.Drawing.Size(50, 50);
+            this.buttonBackSpace.TabIndex = 13;
+            this.buttonBackSpace.Text = "<-";
+            this.buttonBackSpace.UseVisualStyleBackColor = true;
+            // 
+            // buttonEquals
+            // 
+            this.buttonEquals.Location = new System.Drawing.Point(234, 21);
+            this.buttonEquals.Name = "buttonEquals";
+            this.buttonEquals.Size = new System.Drawing.Size(50, 50);
+            this.buttonEquals.TabIndex = 14;
+            this.buttonEquals.Text = "=";
+            this.buttonEquals.UseVisualStyleBackColor = true;
+            // 
+            // buttonCE
+            // 
+            this.buttonCE.Location = new System.Drawing.Point(66, 21);
+            this.buttonCE.Name = "buttonCE";
+            this.buttonCE.Size = new System.Drawing.Size(50, 50);
+            this.buttonCE.TabIndex = 15;
+            this.buttonCE.Text = "CE";
+            this.buttonCE.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxMemoryOperators
+            // 
+            this.groupBoxMemoryOperators.Controls.Add(this.buttonCE);
+            this.groupBoxMemoryOperators.Controls.Add(this.buttonEquals);
+            this.groupBoxMemoryOperators.Controls.Add(this.buttonBackSpace);
+            this.groupBoxMemoryOperators.Controls.Add(this.buttonC);
+            this.groupBoxMemoryOperators.Location = new System.Drawing.Point(12, 388);
+            this.groupBoxMemoryOperators.Name = "groupBoxMemoryOperators";
+            this.groupBoxMemoryOperators.Size = new System.Drawing.Size(348, 87);
+            this.groupBoxMemoryOperators.TabIndex = 5;
+            this.groupBoxMemoryOperators.TabStop = false;
+            this.groupBoxMemoryOperators.UseWaitCursor = true;
             // 
             // FormCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 553);
+            this.ClientSize = new System.Drawing.Size(373, 498);
+            this.Controls.Add(this.groupBoxMemoryOperators);
+            this.Controls.Add(this.buttonOnOff);
+            this.Controls.Add(this.textBoxNumbers);
+            this.Controls.Add(this.groupBoxMemoryModes);
+            this.Controls.Add(this.groupBoxArithmeticOperators);
             this.Controls.Add(this.groupBoxDigits);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormCalculator";
             this.Text = "Math Calculator";
             this.groupBoxDigits.ResumeLayout(false);
+            this.groupBoxArithmeticOperators.ResumeLayout(false);
+            this.groupBoxMemoryModes.ResumeLayout(false);
+            this.groupBoxMemoryOperators.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxDigits;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button buttonSignChange;
+        private System.Windows.Forms.Button buttonDecimal;
+        private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBoxArithmeticOperators;
+        private System.Windows.Forms.Button buttonSquare;
+        private System.Windows.Forms.Button buttonMod;
+        private System.Windows.Forms.Button buttonAddition;
+        private System.Windows.Forms.Button buttonDivision;
+        private System.Windows.Forms.Button buttonDivisionByX;
+        private System.Windows.Forms.Button buttonSqrt;
+        private System.Windows.Forms.Button buttonSubstraction;
+        private System.Windows.Forms.Button buttonMultiplication;
+        private System.Windows.Forms.GroupBox groupBoxMemoryModes;
+        private System.Windows.Forms.Button buttonMPlus;
+        private System.Windows.Forms.Button buttonMS;
+        private System.Windows.Forms.Button buttonMR;
+        private System.Windows.Forms.Button buttonMC;
+        private System.Windows.Forms.TextBox textBoxNumbers;
+        private System.Windows.Forms.Button buttonOnOff;
+        private System.Windows.Forms.Button buttonC;
+        private System.Windows.Forms.Button buttonBackSpace;
+        private System.Windows.Forms.Button buttonEquals;
+        private System.Windows.Forms.Button buttonCE;
+        private System.Windows.Forms.GroupBox groupBoxMemoryOperators;
     }
 }
 

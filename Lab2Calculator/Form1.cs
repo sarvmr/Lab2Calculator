@@ -16,5 +16,16 @@ namespace Lab2Calculator
         {
             InitializeComponent();
         }
+
+        private void buttonOnOff_Click(object sender, EventArgs e)
+        {
+            if (buttonOnOff.Text == "Off")
+            {
+                buttonOnOff.Text = "On";
+            } else
+            {
+                buttonOnOff.Text = "Off";
+            }
+        }
     }
 }

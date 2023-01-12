@@ -8,4 +8,4 @@ C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Cal
 C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.csproj.CoreCompileInputs.cache
 C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.exe
 C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.pdb
-C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.Form1.resources
+C:\Users\samue\source\repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.FormCalculator.resources
