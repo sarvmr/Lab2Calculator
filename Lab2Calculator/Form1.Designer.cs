@@ -63,12 +63,12 @@
             this.buttonEquals = new System.Windows.Forms.Button();
             this.buttonCE = new System.Windows.Forms.Button();
             this.groupBoxMemoryOperators = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMathImage = new System.Windows.Forms.PictureBox();
             this.groupBoxDigits.SuspendLayout();
             this.groupBoxArithmeticOperators.SuspendLayout();
             this.groupBoxMemoryModes.SuspendLayout();
             this.groupBoxMemoryOperators.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMathImage)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxDigits
@@ -406,21 +406,21 @@
             this.groupBoxMemoryOperators.TabIndex = 6;
             this.groupBoxMemoryOperators.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBoxMathImage
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 400);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(441, 199);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxMathImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMathImage.BackgroundImage")));
+            this.pictureBoxMathImage.Location = new System.Drawing.Point(12, 400);
+            this.pictureBoxMathImage.Name = "pictureBoxMathImage";
+            this.pictureBoxMathImage.Size = new System.Drawing.Size(441, 199);
+            this.pictureBoxMathImage.TabIndex = 7;
+            this.pictureBoxMathImage.TabStop = false;
             // 
             // FormCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 624);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxMathImage);
             this.Controls.Add(this.groupBoxMemoryOperators);
             this.Controls.Add(this.buttonOnOff);
             this.Controls.Add(this.textBoxNumbers);
@@ -428,13 +428,15 @@
             this.Controls.Add(this.groupBoxArithmeticOperators);
             this.Controls.Add(this.groupBoxDigits);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormCalculator";
+            this.ShowIcon = false;
             this.Text = "Math Calculator";
             this.groupBoxDigits.ResumeLayout(false);
             this.groupBoxArithmeticOperators.ResumeLayout(false);
             this.groupBoxMemoryModes.ResumeLayout(false);
             this.groupBoxMemoryOperators.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMathImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,7 +478,7 @@
         private System.Windows.Forms.Button buttonEquals;
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.GroupBox groupBoxMemoryOperators;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxMathImage;
     }
 }
 
