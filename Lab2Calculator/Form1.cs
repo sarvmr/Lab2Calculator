@@ -52,5 +52,15 @@ namespace Lab2Calculator
                 this.textBoxNumbers.Text += buttonDigit.Text;
             }
         }
+
+        /// <summary>
+        /// Erase all data. Work in progress.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonC_Click(object sender, EventArgs e)
+        {
+            textBoxNumbers.Text = "0";
+        }
     }
 }
