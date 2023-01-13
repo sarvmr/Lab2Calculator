@@ -45,6 +45,10 @@ namespace Lab2Calculator
             {
                 Button buttonDigit = (Button)sender;
                 SendKeys.Send(buttonDigit.Text);
+                if (textBoxNumbers.Text == "0")
+                {
+                    textBoxNumbers.Text = "";
+                }
                 this.textBoxNumbers.Text += buttonDigit.Text;
             }
         }
