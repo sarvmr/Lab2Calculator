@@ -62,5 +62,22 @@ namespace Lab2Calculator
         {
             textBoxNumbers.Text = "0";
         }
+
+        /// <summary>
+        /// Removes a digit at the head of the string of digits
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonBackSpace_Click(object sender, EventArgs e)
+        {
+            if (textBoxNumbers.Text.Length > 0 & isCalculatorPowerOn & textBoxNumbers.Text != "0")
+            {
+                textBoxNumbers.Text = textBoxNumbers.Text.Substring(1, textBoxNumbers.Text.Length - 1);
+            }
+            if (textBoxNumbers.Text == "")
+            {
+                textBoxNumbers.Text = "0";
+            }
+        }
     }
 }

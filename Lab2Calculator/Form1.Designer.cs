@@ -386,6 +386,7 @@
             this.buttonBackSpace.TabIndex = 13;
             this.buttonBackSpace.Text = "<-";
             this.buttonBackSpace.UseVisualStyleBackColor = true;
+            this.buttonBackSpace.Click += new System.EventHandler(this.buttonBackSpace_Click);
             // 
             // buttonEquals
             // 
