@@ -74,10 +74,17 @@ namespace Lab2Calculator
             {
                 textBoxNumbers.Text = textBoxNumbers.Text.Substring(1, textBoxNumbers.Text.Length - 1);
             }
-            if (textBoxNumbers.Text == "")
+            if (textBoxNumbers.Text == "") // If user backspaces all digits, append 0 to empty string.
             {
                 textBoxNumbers.Text = "0";
             }
+        }
+
+        private void buttonArithmetic_Click(object sender, EventArgs e)
+        {
+            Button arithmeticButton = (Button)sender;
+            textBoxResult.Text += arithmeticButton.Text + this.textBoxNumbers.Text;
+            textBoxNumbers.Text = "0";
         }
     }
 }

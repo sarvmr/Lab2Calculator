@@ -64,6 +64,7 @@
             this.buttonCE = new System.Windows.Forms.Button();
             this.groupBoxMemoryOperators = new System.Windows.Forms.GroupBox();
             this.pictureBoxMathImage = new System.Windows.Forms.PictureBox();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.groupBoxDigits.SuspendLayout();
             this.groupBoxArithmeticOperators.SuspendLayout();
             this.groupBoxMemoryModes.SuspendLayout();
@@ -85,7 +86,7 @@
             this.groupBoxDigits.Controls.Add(this.button3);
             this.groupBoxDigits.Controls.Add(this.button2);
             this.groupBoxDigits.Controls.Add(this.button1);
-            this.groupBoxDigits.Location = new System.Drawing.Point(12, 131);
+            this.groupBoxDigits.Location = new System.Drawing.Point(12, 150);
             this.groupBoxDigits.Name = "groupBoxDigits";
             this.groupBoxDigits.Size = new System.Drawing.Size(187, 251);
             this.groupBoxDigits.TabIndex = 0;
@@ -220,7 +221,7 @@
             this.groupBoxArithmeticOperators.Controls.Add(this.buttonSqrt);
             this.groupBoxArithmeticOperators.Controls.Add(this.buttonSubstraction);
             this.groupBoxArithmeticOperators.Controls.Add(this.buttonMultiplication);
-            this.groupBoxArithmeticOperators.Location = new System.Drawing.Point(220, 131);
+            this.groupBoxArithmeticOperators.Location = new System.Drawing.Point(220, 150);
             this.groupBoxArithmeticOperators.Name = "groupBoxArithmeticOperators";
             this.groupBoxArithmeticOperators.Size = new System.Drawing.Size(140, 251);
             this.groupBoxArithmeticOperators.TabIndex = 1;
@@ -253,6 +254,7 @@
             this.buttonAddition.TabIndex = 18;
             this.buttonAddition.Text = "+";
             this.buttonAddition.UseVisualStyleBackColor = true;
+            this.buttonAddition.Click += new System.EventHandler(this.buttonArithmetic_Click);
             // 
             // buttonDivision
             // 
@@ -262,6 +264,7 @@
             this.buttonDivision.TabIndex = 12;
             this.buttonDivision.Text = "/";
             this.buttonDivision.UseVisualStyleBackColor = true;
+            this.buttonDivision.Click += new System.EventHandler(this.buttonArithmetic_Click);
             // 
             // buttonDivisionByX
             // 
@@ -289,6 +292,7 @@
             this.buttonSubstraction.TabIndex = 16;
             this.buttonSubstraction.Text = "-";
             this.buttonSubstraction.UseVisualStyleBackColor = true;
+            this.buttonSubstraction.Click += new System.EventHandler(this.buttonArithmetic_Click);
             // 
             // buttonMultiplication
             // 
@@ -298,6 +302,7 @@
             this.buttonMultiplication.TabIndex = 14;
             this.buttonMultiplication.Text = "*";
             this.buttonMultiplication.UseVisualStyleBackColor = true;
+            this.buttonMultiplication.Click += new System.EventHandler(this.buttonArithmetic_Click);
             // 
             // groupBoxMemoryModes
             // 
@@ -305,7 +310,7 @@
             this.groupBoxMemoryModes.Controls.Add(this.buttonMS);
             this.groupBoxMemoryModes.Controls.Add(this.buttonMR);
             this.groupBoxMemoryModes.Controls.Add(this.buttonMC);
-            this.groupBoxMemoryModes.Location = new System.Drawing.Point(221, 55);
+            this.groupBoxMemoryModes.Location = new System.Drawing.Point(221, 74);
             this.groupBoxMemoryModes.Name = "groupBoxMemoryModes";
             this.groupBoxMemoryModes.Size = new System.Drawing.Size(232, 70);
             this.groupBoxMemoryModes.TabIndex = 2;
@@ -349,7 +354,7 @@
             // 
             // textBoxNumbers
             // 
-            this.textBoxNumbers.Location = new System.Drawing.Point(12, 27);
+            this.textBoxNumbers.Location = new System.Drawing.Point(12, 40);
             this.textBoxNumbers.Name = "textBoxNumbers";
             this.textBoxNumbers.ReadOnly = true;
             this.textBoxNumbers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -360,7 +365,7 @@
             // buttonOnOff
             // 
             this.buttonOnOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.buttonOnOff.Location = new System.Drawing.Point(79, 75);
+            this.buttonOnOff.Location = new System.Drawing.Point(79, 94);
             this.buttonOnOff.Name = "buttonOnOff";
             this.buttonOnOff.Size = new System.Drawing.Size(50, 37);
             this.buttonOnOff.TabIndex = 4;
@@ -412,7 +417,7 @@
             this.groupBoxMemoryOperators.Controls.Add(this.buttonCE);
             this.groupBoxMemoryOperators.Controls.Add(this.buttonBackSpace);
             this.groupBoxMemoryOperators.Controls.Add(this.buttonC);
-            this.groupBoxMemoryOperators.Location = new System.Drawing.Point(375, 131);
+            this.groupBoxMemoryOperators.Location = new System.Drawing.Point(375, 150);
             this.groupBoxMemoryOperators.Name = "groupBoxMemoryOperators";
             this.groupBoxMemoryOperators.Size = new System.Drawing.Size(78, 251);
             this.groupBoxMemoryOperators.TabIndex = 6;
@@ -421,17 +426,27 @@
             // pictureBoxMathImage
             // 
             this.pictureBoxMathImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMathImage.BackgroundImage")));
-            this.pictureBoxMathImage.Location = new System.Drawing.Point(12, 400);
+            this.pictureBoxMathImage.Location = new System.Drawing.Point(12, 427);
             this.pictureBoxMathImage.Name = "pictureBoxMathImage";
-            this.pictureBoxMathImage.Size = new System.Drawing.Size(441, 199);
+            this.pictureBoxMathImage.Size = new System.Drawing.Size(441, 172);
             this.pictureBoxMathImage.TabIndex = 7;
             this.pictureBoxMathImage.TabStop = false;
+            // 
+            // textBoxResult
+            // 
+            this.textBoxResult.Location = new System.Drawing.Point(12, 12);
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ReadOnly = true;
+            this.textBoxResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxResult.Size = new System.Drawing.Size(441, 22);
+            this.textBoxResult.TabIndex = 8;
             // 
             // FormCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 624);
+            this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.pictureBoxMathImage);
             this.Controls.Add(this.groupBoxMemoryOperators);
             this.Controls.Add(this.buttonOnOff);
@@ -491,6 +506,7 @@
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.GroupBox groupBoxMemoryOperators;
         private System.Windows.Forms.PictureBox pictureBoxMathImage;
+        private System.Windows.Forms.TextBox textBoxResult;
     }
 }
 
