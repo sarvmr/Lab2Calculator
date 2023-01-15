@@ -262,7 +262,7 @@
             this.buttonDivision.Name = "buttonDivision";
             this.buttonDivision.Size = new System.Drawing.Size(50, 50);
             this.buttonDivision.TabIndex = 12;
-            this.buttonDivision.Text = "/";
+            this.buttonDivision.Text = "\\";
             this.buttonDivision.UseVisualStyleBackColor = true;
             this.buttonDivision.Click += new System.EventHandler(this.buttonArithmetic_Click);
             // 

@@ -61,6 +61,7 @@ namespace Lab2Calculator
         private void buttonC_Click(object sender, EventArgs e)
         {
             textBoxNumbers.Text = "0";
+            textBoxResult.Text = "";
         }
 
         /// <summary>
@@ -80,11 +81,18 @@ namespace Lab2Calculator
             }
         }
 
+        /// <summary>
+        /// Broken code. Uncomment to test.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonArithmetic_Click(object sender, EventArgs e)
         {
-            Button arithmeticButton = (Button)sender;
-            textBoxResult.Text += arithmeticButton.Text + this.textBoxNumbers.Text;
-            textBoxNumbers.Text = "0";
+/*            Button arithmeticButton = (Button)sender;
+            string txt = @arithmeticButton.Text + textBoxNumbers.Text;
+            this.textBoxResult.Text += txt;
+            textBoxNumbers.Text = "0";*/
+            
         }
     }
 }
