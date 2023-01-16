@@ -9,3 +9,14 @@ C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Cal
 C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.exe
 C:\Users\samue\Source\Repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.pdb
 C:\Users\samue\source\repos\Lab2GroupCalculator\Lab2Calculator\obj\Debug\Lab2Calculator.FormCalculator.resources
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\bin\Debug\Lab2Calculator.exe.config
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\bin\Debug\Lab2Calculator.exe
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\bin\Debug\Lab2Calculator.pdb
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.csproj.AssemblyReference.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.FormCalculator.resources
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.Properties.Resources.resources
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.csproj.GenerateResource.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.csproj.CoreCompileInputs.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.exe
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Debug\Lab2Calculator.pdb

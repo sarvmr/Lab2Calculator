@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+/// <summary>
+/// Source: https://www.c-sharpcorner.com
+/// </summary>
 namespace Lab2Calculator
 {
     public partial class FormCalculator : Form
     {
         bool isCalculatorPowerOn = false;
+        double FirstNumber;
+        string Operation;
         public FormCalculator()
         {
             InitializeComponent();
@@ -88,11 +94,163 @@ namespace Lab2Calculator
         /// <param name="e"></param>
         private void buttonArithmetic_Click(object sender, EventArgs e)
         {
-/*            Button arithmeticButton = (Button)sender;
+            /*   Button arithmeticButton = (Button)sender;
             string txt = @arithmeticButton.Text + textBoxNumbers.Text;
             this.textBoxResult.Text += txt;
             textBoxNumbers.Text = "0";*/
             
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+            textBoxNumbers.Text = "";
+            Button addButton = (Button)sender;
+            SendKeys.Send("{ADD}");
+            Operation = "+";
+
+        }
+
+        private void buttonSubtract_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+            textBoxNumbers.Text = "";
+            Button subButton = (Button)sender;
+            SendKeys.Send("{SUBTRACT}");
+            Operation = "-";
+
+        }
+
+        private void buttonMultiply_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+            textBoxNumbers.Text = "";
+            Button mulButton = (Button)sender;
+            SendKeys.Send("{MULTIPLY}");
+            Operation = "*";
+
+        }
+
+        private void buttonDivide_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+            textBoxNumbers.Text = "";
+            Button divButton = (Button)sender;
+            SendKeys.Send("{DIVIDE}");
+            Operation = "/";
+
+        }
+
+        private void buttonModulo_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+            textBoxNumbers.Text = "";
+            //Button modButton = (Button)sender;
+            //SendKeys.Send("{REMAINDER}");
+            Operation = "%";
+
+        }
+
+        private void buttonReverse_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+
+            if (FirstNumber == 0)
+            {
+                textBoxResult.Text = "Cannot divide by zero";
+
+            }
+            else
+            {
+                double Result = 1.0 / FirstNumber;
+                textBoxResult.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }           
+
+        }
+
+        private void buttonSqrt_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+
+            if (FirstNumber < 0)
+            {
+                textBoxResult.Text = "No square root for negative numbers";
+
+            }
+            else
+            {
+                double Result = Math.Sqrt(FirstNumber);
+                textBoxResult.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+        }
+
+        private void buttonPowerTwo_Click(object sender, EventArgs e)
+        {
+            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+
+                double Result = Math.Pow(FirstNumber , 2.0);
+                textBoxResult.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+        }
+        
+
+        private void buttonEqual_Click(object sender, EventArgs e)
+        {
+            double SecondNumber;
+            double Result;
+
+            SecondNumber = Convert.ToDouble(textBoxNumbers.Text);
+
+            if (Operation == "+")
+            {
+                Result = (FirstNumber + SecondNumber);
+                textBoxResult.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+            if (Operation == "-")
+            {
+                Result = (FirstNumber - SecondNumber);
+                textBoxResult.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+            if (Operation == "*")
+            {
+                Result = (FirstNumber * SecondNumber);
+                textBoxResult.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+            if (Operation == "/")
+            {
+                if (SecondNumber == 0)
+                {
+                    textBoxResult.Text = "Cannot divide by zero";
+
+                }
+                else
+                {
+                    Result = (FirstNumber / SecondNumber);
+                    textBoxResult.Text = Convert.ToString(Result);
+                    FirstNumber = Result;
+                }
+            }
+
+            if (Operation == "%")
+            {
+                if (SecondNumber == 0)
+                {
+                    textBoxResult.Text = "Cannot divide by zero";
+
+                }
+                else
+                {
+                    Result = (FirstNumber % SecondNumber);
+                    textBoxResult.Text = Convert.ToString(Result);
+                    FirstNumber = Result;
+                }
+            }
+
         }
     }
 }
