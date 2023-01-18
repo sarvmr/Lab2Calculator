@@ -94,14 +94,35 @@ namespace Lab2Calculator
         /// <param name="e"></param>
         private void buttonArithmetic_Click(object sender, EventArgs e)
         {
-            /*   Button arithmeticButton = (Button)sender;
-            string txt = @arithmeticButton.Text + textBoxNumbers.Text;
-            this.textBoxResult.Text += txt;
-            textBoxNumbers.Text = "0";*/
-            
+            if (isCalculatorPowerOn)
+            {
+                Button arithmeticButton = (Button)sender;
+                FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+                textBoxNumbers.Text = "";
+                Operation = arithmeticButton.Text;
+
+                if (arithmeticButton.Text == "+")
+                {
+                    SendKeys.Send("{ADD}");
+                }
+                else if (arithmeticButton.Text == "-")
+                {
+                    SendKeys.Send("{SUBTRACT}");
+                }
+                else if (arithmeticButton.Text == "*")
+                {
+                    SendKeys.Send("{MULTIPLY}");
+
+                }
+                else if (arithmeticButton.Text == "/")
+                {
+                    SendKeys.Send("{DIVIDE}");
+                }
+            }
+
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+/*        private void buttonAdd_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
             textBoxNumbers.Text = "";
@@ -139,7 +160,7 @@ namespace Lab2Calculator
             SendKeys.Send("{DIVIDE}");
             Operation = "/";
 
-        }
+        }*/
 
         private void buttonModulo_Click(object sender, EventArgs e)
         {
@@ -172,7 +193,10 @@ namespace Lab2Calculator
         private void buttonSqrt_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-
+            if (textBoxNumbers.Text == "")
+            {
+                FirstNumber = Convert.ToDouble(textBoxResult.Text);
+            }
             if (FirstNumber < 0)
             {
                 textBoxResult.Text = "No square root for negative numbers";
@@ -183,16 +207,24 @@ namespace Lab2Calculator
                 double Result = Math.Sqrt(FirstNumber);
                 textBoxResult.Text = Convert.ToString(Result);
                 FirstNumber = Result;
+                textBoxNumbers.Text = "";
             }
         }
 
         private void buttonPowerTwo_Click(object sender, EventArgs e)
         {
-            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-
-                double Result = Math.Pow(FirstNumber , 2.0);
+           
+            if (textBoxNumbers.Text == "")
+            {
+                FirstNumber = Convert.ToDouble(textBoxResult.Text);
+            } else
+            {
+                FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+            }
+            double Result = Math.Pow(FirstNumber , 2.0);
                 textBoxResult.Text = Convert.ToString(Result);
                 FirstNumber = Result;
+            textBoxNumbers.Text = "";
         }
         
 
