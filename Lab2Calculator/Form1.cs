@@ -331,7 +331,7 @@ namespace Lab2Calculator
                     {
                         if (textBoxResult.Text != "")
                         {
-                            memory += Convert.ToDouble(textBoxNumbers.Text);
+                            memory += Convert.ToDouble(textBoxResult.Text);
                         }
                     } else
                     {
@@ -340,6 +340,17 @@ namespace Lab2Calculator
                 }
 
 
+            }
+        }
+
+        private void buttonSignChange_Click(object sender, EventArgs e)
+        {
+            if (isCalculatorPowerOn)
+            {
+                if (textBoxNumbers.Text != "")
+                {
+                    textBoxNumbers.Text = "-" + textBoxNumbers.Text;
+                }
             }
         }
     }

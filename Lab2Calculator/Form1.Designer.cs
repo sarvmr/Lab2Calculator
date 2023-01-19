@@ -101,9 +101,9 @@
             this.buttonSignChange.Name = "buttonSignChange";
             this.buttonSignChange.Size = new System.Drawing.Size(51, 50);
             this.buttonSignChange.TabIndex = 11;
-            this.buttonSignChange.Text = "-";
+            this.buttonSignChange.Text = "-/+";
             this.buttonSignChange.UseVisualStyleBackColor = true;
-            this.buttonSignChange.Click += new System.EventHandler(this.buttonDigit_Click);
+            this.buttonSignChange.Click += new System.EventHandler(this.buttonSignChange_Click);
             // 
             // buttonDecimal
             // 
