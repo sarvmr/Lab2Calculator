@@ -14,6 +14,12 @@ using System.Windows.Forms;
 /// </summary>
 namespace Lab2Calculator
 {
+    /// <summary>
+    /// Lab 2 Calculator Application
+    /// Authors: Samuel Tjahjadi A00978466 & Sarvenaz Mohammadi A01158178
+    /// Date: January 18, 2023
+    /// Source: n/a
+    /// </summary>
     public partial class FormCalculator : Form
     {
         char[] validOperationSymbols = new char[] {'+', '-', '*', '/'};
