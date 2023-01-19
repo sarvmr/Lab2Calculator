@@ -323,7 +323,11 @@ namespace Lab2Calculator
             {
                 if (textBoxNumbers.Text != "")
                 {
-                    textBoxNumbers.Text = "-" + textBoxNumbers.Text;
+                    textBoxNumbers.Text = Convert.ToString(-1.0 * Convert.ToDouble(textBoxNumbers.Text));
+                } else if (textBoxResult.Text != "")
+                {
+                    textBoxResult.Text = Convert.ToString(-1.0 * Convert.ToDouble(textBoxResult.Text));
+
                 }
             }
         }
