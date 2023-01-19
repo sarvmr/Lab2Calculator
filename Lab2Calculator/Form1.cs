@@ -119,7 +119,6 @@ namespace Lab2Calculator
                 else if (arithmeticButton.Text == "*")
                 {
                     SendKeys.Send("{MULTIPLY}");
-
                 }
                 else if (arithmeticButton.Text == "/")
                 {
@@ -132,56 +131,6 @@ namespace Lab2Calculator
             }
 
         }
-
-/*        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-            textBoxNumbers.Text = "";
-            Button addButton = (Button)sender;
-            SendKeys.Send("{ADD}");
-            Operation = "+";
-
-        }
-
-        private void buttonSubtract_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-            textBoxNumbers.Text = "";
-            Button subButton = (Button)sender;
-            SendKeys.Send("{SUBTRACT}");
-            Operation = "-";
-
-        }
-
-        private void buttonMultiply_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-            textBoxNumbers.Text = "";
-            Button mulButton = (Button)sender;
-            SendKeys.Send("{MULTIPLY}");
-            Operation = "*";
-
-        }
-
-        private void buttonDivide_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-            textBoxNumbers.Text = "";
-            Button divButton = (Button)sender;
-            SendKeys.Send("{DIVIDE}");
-            Operation = "/";
-
-        }*/
-
-/*        private void buttonModulo_Click(object sender, EventArgs e)
-        {
-            FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-            textBoxNumbers.Text = "";
-            //Button modButton = (Button)sender;
-            //SendKeys.Send("{REMAINDER}");
-            Operation = "%";
-
-        }*/
 
         private void buttonReverse_Click(object sender, EventArgs e)
         {
