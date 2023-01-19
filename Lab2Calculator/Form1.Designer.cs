@@ -457,6 +457,7 @@
             this.buttonCE.TabIndex = 15;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = true;
+            this.buttonCE.Click += new System.EventHandler(this.buttonCE_Click);
             // 
             // groupBoxMemoryOperators
             // 

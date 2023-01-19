@@ -353,5 +353,14 @@ namespace Lab2Calculator
                 }
             }
         }
+
+        private void buttonCE_Click(object sender, EventArgs e)
+        {
+            if (isCalculatorPowerOn) {
+                textBoxNumbers.Text = "0";
+
+            }
+        }
+
     }
 }
