@@ -16,9 +16,13 @@ namespace Lab2Calculator
 {
     public partial class FormCalculator : Form
     {
+        char[] validOperationSymbols = new char[] {'+', '-', '*', '/'};
         bool isCalculatorPowerOn = false;
         double FirstNumber;
+        double LastNumber;
         string Operation;
+        string operationSymbol;
+
         public FormCalculator()
         {
             InitializeComponent();
@@ -59,6 +63,8 @@ namespace Lab2Calculator
             }
         }
 
+
+
         /// <summary>
         /// Erase all data. Work in progress.
         /// </summary>
@@ -88,19 +94,10 @@ namespace Lab2Calculator
         }
 
         /// <summary>
-        /// Broken code. Uncomment to test.
+        /// function of "+" button 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonArithmetic_Click(object sender, EventArgs e)
-        {
-            /*   Button arithmeticButton = (Button)sender;
-            string txt = @arithmeticButton.Text + textBoxNumbers.Text;
-            this.textBoxResult.Text += txt;
-            textBoxNumbers.Text = "0";*/
-            
-        }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -110,7 +107,11 @@ namespace Lab2Calculator
             Operation = "+";
 
         }
-
+        /// <summary>
+        /// function of "-" button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSubtract_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -120,7 +121,11 @@ namespace Lab2Calculator
             Operation = "-";
 
         }
-
+        /// <summary>
+        /// function of "*" button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -130,7 +135,11 @@ namespace Lab2Calculator
             Operation = "*";
 
         }
-
+        /// <summary>
+        /// function of "/" button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonDivide_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -140,7 +149,11 @@ namespace Lab2Calculator
             Operation = "/";
 
         }
-
+        /// <summary>
+        /// function of "%" button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModulo_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -150,7 +163,11 @@ namespace Lab2Calculator
             Operation = "%";
 
         }
-
+        /// <summary>
+        /// function of "1/x" button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonReverse_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -168,7 +185,11 @@ namespace Lab2Calculator
             }           
 
         }
-
+        /// <summary>
+        /// function of "sqrt" button 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSqrt_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -186,6 +207,11 @@ namespace Lab2Calculator
             }
         }
 
+        /// <summary>
+        /// function of "x^2" button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonPowerTwo_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
@@ -196,6 +222,12 @@ namespace Lab2Calculator
         }
         
 
+        /// <summary>
+        /// this function activates when pressing 
+        /// the equal button on the calculator form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonEqual_Click(object sender, EventArgs e)
         {
             double SecondNumber;
@@ -252,5 +284,72 @@ namespace Lab2Calculator
             }
 
         }
+
+        /// <summary>
+        /// this function reads numbers and four main operations from keyboard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBoxNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (isCalculatorPowerOn)
+            {
+                ///checks if the input is only numbers
+                if (char.IsDigit(e.KeyChar) || e.KeyChar == '.') 
+                {
+                    e.Handled = true;
+                    /// if first time typing or after pressing operation buttons, clears the text box
+                    if (textBoxNumbers.Text == "0" || textBoxNumbers.Text == "+" || textBoxNumbers.Text == "-"
+                    || textBoxNumbers.Text == "*" || textBoxNumbers.Text == "/")
+                    {
+                        textBoxNumbers.Text = "";
+                    }
+                    textBoxNumbers.Text += e.KeyChar;
+                    
+                    FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+                }
+                /// checks if you are doing the main operations
+                else if (validOperationSymbols.Contains(e.KeyChar))
+                {
+                    textBoxNumbers.Text = e.KeyChar.ToString();
+                    operationSymbol = textBoxNumbers.Text;
+                    LastNumber = FirstNumber;
+                }
+                ///what happens after pressing Enter
+                if (e.KeyChar == (char)Keys.Return)
+                {
+                    switch (operationSymbol)
+                    {
+                        case "+":
+                        textBoxResult.Text = Convert.ToString(FirstNumber + LastNumber);
+                            break;
+
+                        case "-":
+                            textBoxResult.Text = Convert.ToString(LastNumber - FirstNumber);
+                            break;
+
+                        case "*":
+                            textBoxResult.Text = Convert.ToString(FirstNumber * LastNumber);
+                            break;
+
+                        case "/":
+
+                            if (FirstNumber != 0)
+                            {
+                                textBoxResult.Text = Convert.ToString(LastNumber / FirstNumber);
+
+                            }
+                            else textBoxResult.Text = "Cannot divide by zero";
+                            break;
+
+
+                        default:
+                            break;
+
+                    }
+                }
+            }
+        }
     }
 }
+
