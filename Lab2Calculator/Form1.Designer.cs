@@ -402,6 +402,7 @@
             this.textBoxNumbers.Size = new System.Drawing.Size(441, 22);
             this.textBoxNumbers.TabIndex = 3;
             this.textBoxNumbers.Text = "0";
+            this.textBoxNumbers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumbers_KeyPress);
             // 
             // buttonOnOff
             // 
@@ -507,7 +508,8 @@
             this.Controls.Add(this.groupBoxArithmeticOperators);
             this.Controls.Add(this.groupBoxDigits);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormCalculator";
             this.ShowIcon = false;
