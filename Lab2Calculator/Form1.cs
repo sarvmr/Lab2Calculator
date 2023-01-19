@@ -98,9 +98,14 @@ namespace Lab2Calculator
         {
             if (isCalculatorPowerOn)
             {
+                var isNumeric = int.TryParse(textBoxNumbers.Text, out _);
+                if (isNumeric)
+                {
+                    FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
+                    textBoxNumbers.Text = "";
+
+                }
                 Button arithmeticButton = (Button)sender;
-                FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-                textBoxNumbers.Text = "";
                 Operation = arithmeticButton.Text;
 
                 if (arithmeticButton.Text == "+")
@@ -273,7 +278,6 @@ namespace Lab2Calculator
                     FirstNumber = Result;
                 }
             }
-
             if (Operation == "%")
             {
                 if (SecondNumber == 0)
@@ -288,7 +292,7 @@ namespace Lab2Calculator
                     FirstNumber = Result;
                 }
             }
-
+            textBoxNumbers.Text = "";
         }
 
         /// <summary>
