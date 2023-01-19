@@ -328,6 +328,12 @@ namespace Lab2Calculator
             }
         }
 
+        private void buttonCE_Click(object sender, EventArgs e)
+        {
+            if (isCalculatorPowerOn)
+            {
+                textBoxNumbers.Text = "0";
+            }
         }
 
         /// <summary>
@@ -340,7 +346,7 @@ namespace Lab2Calculator
             if (isCalculatorPowerOn)
             {
                 ///checks if the input is only numbers
-                if (char.IsDigit(e.KeyChar) || e.KeyChar == '.') 
+                if (char.IsDigit(e.KeyChar) || e.KeyChar == '.')
                 {
                     e.Handled = true;
                     /// if first time typing or after pressing operation buttons, clears the text box
@@ -350,7 +356,7 @@ namespace Lab2Calculator
                         textBoxNumbers.Text = "";
                     }
                     textBoxNumbers.Text += e.KeyChar;
-                    
+
                     FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
                 }
                 /// checks if you are doing the main operations
@@ -366,7 +372,7 @@ namespace Lab2Calculator
                     switch (operationSymbol)
                     {
                         case "+":
-                        textBoxResult.Text = Convert.ToString(FirstNumber + LastNumber);
+                            textBoxResult.Text = Convert.ToString(FirstNumber + LastNumber);
                             break;
 
                         case "-":
@@ -398,13 +404,6 @@ namespace Lab2Calculator
     }
 }
 
-        private void buttonCE_Click(object sender, EventArgs e)
-        {
-            if (isCalculatorPowerOn) {
-                textBoxNumbers.Text = "0";
 
-            }
-        }
 
-    }
-}
+

@@ -402,7 +402,6 @@
             this.textBoxNumbers.Size = new System.Drawing.Size(441, 22);
             this.textBoxNumbers.TabIndex = 3;
             this.textBoxNumbers.Text = "0";
-            this.textBoxNumbers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumbers_KeyPress);
             // 
             // buttonOnOff
             // 
