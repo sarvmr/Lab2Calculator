@@ -36,6 +36,11 @@ namespace Lab2Calculator
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Rudimentary on and off button logic for the calculator.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonOnOff_Click(object sender, EventArgs e)
         {
             if (buttonOnOff.Text == "Off")
@@ -322,7 +327,11 @@ namespace Lab2Calculator
 
             }
         }
-
+        /// <summary>
+        /// Makes the current operation sign change.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSignChange_Click(object sender, EventArgs e)
         {
             if (isCalculatorPowerOn)
@@ -338,6 +347,11 @@ namespace Lab2Calculator
             }
         }
 
+        /// <summary>
+        /// Clears the current operand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonCE_Click(object sender, EventArgs e)
         {
             if (isCalculatorPowerOn)
