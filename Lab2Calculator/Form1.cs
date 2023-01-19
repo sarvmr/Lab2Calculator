@@ -19,6 +19,8 @@ namespace Lab2Calculator
         bool isCalculatorPowerOn = false;
         double FirstNumber;
         string Operation;
+        double memory;
+
         public FormCalculator()
         {
             InitializeComponent();
@@ -88,7 +90,7 @@ namespace Lab2Calculator
         }
 
         /// <summary>
-        /// Broken code. Uncomment to test.
+        /// Detects which arithmetic button was called and executes that arithmetic operation.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -117,6 +119,10 @@ namespace Lab2Calculator
                 else if (arithmeticButton.Text == "/")
                 {
                     SendKeys.Send("{DIVIDE}");
+                }
+                else if (arithmeticButton.Text == "%")
+                {
+                    SendKeys.Send("{MOD}");
                 }
             }
 
@@ -162,7 +168,7 @@ namespace Lab2Calculator
 
         }*/
 
-        private void buttonModulo_Click(object sender, EventArgs e)
+/*        private void buttonModulo_Click(object sender, EventArgs e)
         {
             FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
             textBoxNumbers.Text = "";
@@ -170,7 +176,7 @@ namespace Lab2Calculator
             //SendKeys.Send("{REMAINDER}");
             Operation = "%";
 
-        }
+        }*/
 
         private void buttonReverse_Click(object sender, EventArgs e)
         {
@@ -283,6 +289,54 @@ namespace Lab2Calculator
                 }
             }
 
+        }
+
+        /// <summary>
+        /// Memory Store puts the number on the display into the memory
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonMemoryFunctions_Click(object sender, EventArgs e)
+        {
+            if (isCalculatorPowerOn)
+            {
+                Button memoryButton = (Button)sender;
+                if (memoryButton.Text == "MS") // Memory Store: Stores number into memory
+                {
+                    if (textBoxNumbers.Text == "") 
+                    {
+                        if (textBoxResult.Text != "")
+                        {
+                            memory = Convert.ToDouble(textBoxResult.Text);
+                        }
+                    } else
+                    {
+                        memory = Convert.ToDouble(textBoxNumbers.Text);
+                    }
+                }
+                else if (memoryButton.Text == "MR") //  Memory Recall: Displays memory onto screen
+                {
+                    textBoxNumbers.Text = Convert.ToString(memory);
+                }
+                else if (memoryButton.Text == "MC") // Memory Clear: Clears memory
+                {
+                    memory = 0;
+                } else if (memoryButton.Text == "M+") // Memory Plus: Adds number to the memory
+                {
+                    if (textBoxNumbers.Text == "")
+                    {
+                        if (textBoxResult.Text != "")
+                        {
+                            memory += Convert.ToDouble(textBoxNumbers.Text);
+                        }
+                    } else
+                    {
+                        memory += Convert.ToDouble(textBoxNumbers.Text);
+                    }
+                }
+
+
+            }
         }
     }
 }

@@ -266,7 +266,7 @@
             this.buttonMod.TabIndex = 15;
             this.buttonMod.Text = "%";
             this.buttonMod.UseVisualStyleBackColor = true;
-            this.buttonMod.Click += new System.EventHandler(this.buttonModulo_Click);
+            this.buttonMod.Click += new System.EventHandler(this.buttonArithmetic_Click);
             // 
             // buttonAddition
             // 
@@ -357,6 +357,7 @@
             this.buttonMPlus.TabIndex = 15;
             this.buttonMPlus.Text = "M+";
             this.buttonMPlus.UseVisualStyleBackColor = true;
+            this.buttonMPlus.Click += new System.EventHandler(this.buttonMemoryFunctions_Click);
             // 
             // buttonMS
             // 
@@ -367,6 +368,7 @@
             this.buttonMS.TabIndex = 14;
             this.buttonMS.Text = "MS";
             this.buttonMS.UseVisualStyleBackColor = true;
+            this.buttonMS.Click += new System.EventHandler(this.buttonMemoryFunctions_Click);
             // 
             // buttonMR
             // 
@@ -377,6 +379,7 @@
             this.buttonMR.TabIndex = 13;
             this.buttonMR.Text = "MR";
             this.buttonMR.UseVisualStyleBackColor = true;
+            this.buttonMR.Click += new System.EventHandler(this.buttonMemoryFunctions_Click);
             // 
             // buttonMC
             // 
@@ -387,6 +390,7 @@
             this.buttonMC.TabIndex = 12;
             this.buttonMC.Text = "MC";
             this.buttonMC.UseVisualStyleBackColor = true;
+            this.buttonMC.Click += new System.EventHandler(this.buttonMemoryFunctions_Click);
             // 
             // textBoxNumbers
             // 
