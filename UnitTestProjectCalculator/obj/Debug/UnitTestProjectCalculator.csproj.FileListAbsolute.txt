@@ -1,0 +1,2 @@
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\UnitTestProjectCalculator\obj\Debug\UnitTestProjectCalculator.csproj.AssemblyReference.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\UnitTestProjectCalculator\obj\Debug\UnitTestProjectCalculator.csproj.CoreCompileInputs.cache

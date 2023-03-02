@@ -17,11 +17,11 @@ namespace Lab2Calculator
     public partial class FormCalculator : Form
     {
         char[] validOperationSymbols = new char[] {'+', '-', '*', '/'};
-        bool isCalculatorPowerOn = false;
+        public bool isCalculatorPowerOn = false;
         double FirstNumber;
         double LastNumber;
         string Operation;
-        string operationSymbol;
+        public string operationSymbol;
 
         double memory;
 
@@ -400,6 +400,11 @@ namespace Lab2Calculator
                     }
                 }
             }
+        }
+
+        public void buttonPowerTwo_Click(object value1, object value2)
+        {
+            throw new NotImplementedException();
         }
     }
 }
