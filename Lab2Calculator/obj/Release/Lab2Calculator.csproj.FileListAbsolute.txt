@@ -1,0 +1,11 @@
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\bin\Release\Lab2Calculator.exe.config
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\bin\Release\Lab2Calculator.exe
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\bin\Release\Lab2Calculator.pdb
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.csproj.AssemblyReference.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.FormCalculator.resources
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.Properties.Resources.resources
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.csproj.GenerateResource.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.csproj.CoreCompileInputs.cache
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.exe
+C:\Users\sarvm\Documents\Comp3951\Lab2Calculator\Lab2Calculator\obj\Release\Lab2Calculator.pdb

@@ -14,6 +14,12 @@ using System.Windows.Forms;
 /// </summary>
 namespace Lab2Calculator
 {
+    /// <summary>
+    /// Lab 2 Calculator Application
+    /// Authors: Samuel Tjahjadi A00978466 & Sarvenaz Mohammadi A01158178
+    /// Date: January 18, 2023
+    /// Source: n/a
+    /// </summary>
     public partial class FormCalculator : Form
     {
         char[] validOperationSymbols = new char[] {'+', '-', '*', '/'};
@@ -192,18 +198,16 @@ namespace Lab2Calculator
         /// <param name="e"></param>
         private void buttonPowerTwo_Click(object sender, EventArgs e)
         {
-           
-            if (textBoxNumbers.Text == "")
-            {
-                FirstNumber = Convert.ToDouble(textBoxResult.Text);
-            } else
-            {
-                FirstNumber = Convert.ToDouble(textBoxNumbers.Text);
-            }
-            double Result = Math.Pow(FirstNumber , 2.0);
-                textBoxResult.Text = Convert.ToString(Result);
-                FirstNumber = Result;
+            double result = powerTwo(textBoxNumbers.Text, textBoxResult.Text);
+            textBoxResult.Text = Convert.ToString(result);
+            FirstNumber = result;
             textBoxNumbers.Text = "";
+        }
+
+        public static double powerTwo(String numberText, String resultText)
+        {
+            double number = numberText == "" ? Convert.ToDouble(resultText) : Convert.ToDouble(numberText);
+            return Math.Pow(number, 2.0);
         }
         
 
@@ -217,56 +221,60 @@ namespace Lab2Calculator
         {
             double SecondNumber;
             double Result;
+            string ResultAsString;
 
             SecondNumber = Convert.ToDouble(textBoxNumbers.Text);
 
-            if (Operation == "+")
-            {
-                Result = (FirstNumber + SecondNumber);
-                textBoxResult.Text = Convert.ToString(Result);
+            try {
+                Result = calculateResult(Operation, FirstNumber, SecondNumber);
                 FirstNumber = Result;
-            }
-            if (Operation == "-")
+                ResultAsString = Convert.ToString(Result);
+            } catch (Exception ex)
             {
-                Result = (FirstNumber - SecondNumber);
-                textBoxResult.Text = Convert.ToString(Result);
-                FirstNumber = Result;
+                ResultAsString = ex.Message;
             }
-            if (Operation == "*")
-            {
-                Result = (FirstNumber * SecondNumber);
-                textBoxResult.Text = Convert.ToString(Result);
-                FirstNumber = Result;
-            }
-            if (Operation == "/")
-            {
-                if (SecondNumber == 0)
-                {
-                    textBoxResult.Text = "Cannot divide by zero";
 
-                }
-                else
-                {
-                    Result = (FirstNumber / SecondNumber);
-                    textBoxResult.Text = Convert.ToString(Result);
-                    FirstNumber = Result;
-                }
-            }
-            if (Operation == "%")
-            {
-                if (SecondNumber == 0)
-                {
-                    textBoxResult.Text = "Cannot divide by zero";
-
-                }
-                else
-                {
-                    Result = (FirstNumber % SecondNumber);
-                    textBoxResult.Text = Convert.ToString(Result);
-                    FirstNumber = Result;
-                }
-            }
+            textBoxResult.Text = ResultAsString;
             textBoxNumbers.Text = "";
+        }
+
+        public static double calculateResult(String operation, double firstNumber, double secondNumber)
+        {
+            if (operation == "+")
+            {
+                return (firstNumber + secondNumber);
+            }
+            if (operation == "-")
+            {
+                return (firstNumber - secondNumber);
+            }
+            if (operation == "*")
+            {
+                return (firstNumber * secondNumber);
+            }
+            if (operation == "/")
+            {
+                if (secondNumber == 0)
+                {
+                    throw new Exception("Cannot divide by zero");
+                }
+                else
+                {
+                    return (firstNumber / secondNumber);
+                }
+            }
+            if (operation == "%")
+            {
+                if (secondNumber == 0)
+                {
+                    throw new Exception("Cannot divide by zero");
+                }
+                else
+                {
+                   return (firstNumber % secondNumber);
+                }
+            }
+            throw new Exception("Invalid operation");
         }
 
         /// <summary>
@@ -323,7 +331,11 @@ namespace Lab2Calculator
             {
                 if (textBoxNumbers.Text != "")
                 {
-                    textBoxNumbers.Text = "-" + textBoxNumbers.Text;
+                    textBoxNumbers.Text = Convert.ToString(-1.0 * Convert.ToDouble(textBoxNumbers.Text));
+                } else if (textBoxResult.Text != "")
+                {
+                    textBoxResult.Text = Convert.ToString(-1.0 * Convert.ToDouble(textBoxResult.Text));
+
                 }
             }
         }
